@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/wyatt/xml_order",
+  "command": "/usr/bin/c++      -o CMakeFiles/test.dir/src/gen.cpp.o -c /home/wyatt/xml_order/src/gen.cpp",
+  "file": "/home/wyatt/xml_order/src/gen.cpp"
+},
+{
+  "directory": "/home/wyatt/xml_order",
+  "command": "/usr/bin/c++      -o CMakeFiles/test.dir/src/reader.cpp.o -c /home/wyatt/xml_order/src/reader.cpp",
+  "file": "/home/wyatt/xml_order/src/reader.cpp"
+}
+]
