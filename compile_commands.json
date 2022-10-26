@@ -1,12 +1,12 @@
 [
 {
-  "directory": "/home/wyatt/xml_order",
-  "command": "/usr/bin/c++      -o CMakeFiles/test.dir/src/gen.cpp.o -c /home/wyatt/xml_order/src/gen.cpp",
-  "file": "/home/wyatt/xml_order/src/gen.cpp"
+  "directory": "/home/wyatt/xsd2cpp",
+  "command": "/usr/bin/c++   -I/home/wyatt/boost_1_60_0    -o CMakeFiles/test.dir/src/gen.cpp.o -c /home/wyatt/xsd2cpp/src/gen.cpp",
+  "file": "/home/wyatt/xsd2cpp/src/gen.cpp"
 },
 {
-  "directory": "/home/wyatt/xml_order",
-  "command": "/usr/bin/c++      -o CMakeFiles/test.dir/src/reader.cpp.o -c /home/wyatt/xml_order/src/reader.cpp",
-  "file": "/home/wyatt/xml_order/src/reader.cpp"
+  "directory": "/home/wyatt/xsd2cpp",
+  "command": "/usr/bin/c++   -I/home/wyatt/boost_1_60_0    -o CMakeFiles/test.dir/src/reader.cpp.o -c /home/wyatt/xsd2cpp/src/reader.cpp",
+  "file": "/home/wyatt/xsd2cpp/src/reader.cpp"
 }
 ]

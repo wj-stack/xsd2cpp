@@ -1,0 +1,3 @@
+/home/wyatt/xsd2cpp/CMakeFiles/rebuild_cache.dir
+/home/wyatt/xsd2cpp/CMakeFiles/edit_cache.dir
+/home/wyatt/xsd2cpp/CMakeFiles/test.dir

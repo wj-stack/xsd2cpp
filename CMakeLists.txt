@@ -10,7 +10,7 @@ else()
   set(LIB_TYPE SHARED)
 endif()
 
-# include_directories(~/boost_1_60_0/)
+include_directories(~/boost_1_60_0/)
 
 # include_directories(src)
 

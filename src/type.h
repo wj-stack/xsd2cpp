@@ -1,5 +1,5 @@
-
-
+#ifndef __XSD_TYPE_
+#define __XSD_TYPE_
 #include <boost/lexical_cast.hpp>
 #include <iostream>
 #include <memory>
@@ -7,9 +7,10 @@
 #include <xercesc/dom/DOM.hpp>
 #include <xercesc/dom/DOMElement.hpp>
 #include <xercesc/util/XMLString.hpp>
-// Test whether T is a fundamental C++ type.
-//
 
+// Test whether T is a fundamental C++ type.
+
+namespace xsd {
 template <typename T> struct fundamental_p {
   static const bool r = false;
 };
@@ -87,6 +88,16 @@ using namespace xercesc;
 // traits
 template <typename T, bool fund = fundamental_p<T>::r> class traits;
 
+// type
+class type_ {
+public:
+  type_() = default;
+  virtual ~type_() = default;
+};
+
+typedef type_ type;
+typedef type_ container;
+
 // base_type : string->base_type
 template <class T> class traits<T, true> {
 public:
@@ -107,7 +118,7 @@ public:
 template <typename T, bool fund = fundamental_p<T>::r> class one_container;
 
 // simple
-template <typename T> class one_container<T, true> {
+template <typename T> class one_container<T, true> : public container {
 private:
   std::unique_ptr<T> g;
 
@@ -174,3 +185,68 @@ private:
   one_container<float> to_; // 容器
   one_container<std::string> from_;
 };
+
+} // namespace xsd
+
+namespace xml_schema {
+
+// TODO:　改为容器?
+
+typedef ::xsd::type type;
+typedef ::xsd::type type;
+
+// 8-bit
+//
+typedef signed char byte;
+typedef unsigned char unsigned_byte;
+
+// 16-bit
+//
+typedef short short_;
+typedef unsigned short unsigned_short;
+
+// 32-bit
+//
+typedef int int_;
+typedef unsigned int unsigned_int;
+
+// 64-bit
+//
+typedef long long long_;
+typedef unsigned long long unsigned_long;
+
+// Supposed to be arbitrary-length integral types.
+//
+typedef long long integer;
+typedef long long non_positive_integer;
+typedef unsigned long long non_negative_integer;
+typedef unsigned long long positive_integer;
+typedef long long negative_integer;
+
+// Boolean.
+//
+typedef bool boolean;
+
+// Floating-point types.
+//
+typedef float float_;
+typedef double double_;
+typedef double decimal;
+
+// String types.
+//
+typedef std::string string;
+typedef std::string language;
+typedef std::string ncname;
+typedef std::string nmtokens;
+typedef std::string nmtoken;
+typedef std::string name;
+typedef std::string normalized_string;
+typedef std::string token;
+
+// URI.
+//
+typedef std::string uri;
+} // namespace xml_schema
+
+#endif // !__XSD_TYPE_

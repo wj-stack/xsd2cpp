@@ -51,11 +51,12 @@ TypeInfo Reader::Info(DOMElement *root) {
   auto baseURI = XMLString::transcode(root->getBaseURI());
   auto nodeName = XMLString::transcode(root->getNodeName());
 
-  cout << "prefix:" << prefix << " tagName:"
-       << tagName
-       // << " typeName:" << typeName << " typeNamespace:" << typeNamespace
-       << " localName:" << localName << " NS URI:" << namespaceURI
-       << " base URI:" << baseURI << " nodeName:" << nodeName << endl;
+  cout
+      // "prefix:" << prefix
+      << " tagName:" << tagName << endl;
+  // << " typeName:" << typeName << " typeNamespace:" << typeNamespace
+  // << " localName:" << localName << " NS URI:" << namespaceURI;
+  // << " base URI:" << baseURI << " nodeName:" << nodeName << endl;
   // auto elems = ElemVec(root);
   // for (auto &p : elems) {
   //   auto attrs = AttrVec(p);
